@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./background.jpg");
+    background-repeat: no-repeat;
+    font-family: Consolas, 'Times New Roman', monospace;
+    font-size: 14px;
+}
+
+header, footer {
+    background-color: white;
+    margin: 0 8vw;
+}
+
+#logo {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+main > p, #contact-heading {
+    font-family: "Super Mario 256", 'Times New Roman', monospace;
+    font-size: 40px;
+    background-color: white;
+    text-align: center;
+    margin: 4vh 3vw;
+}
+
+header nav, footer nav {
+    margin-right: 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1vw;
+}
+
+nav a {
+    font-family: "Super Mario 256", 'Times New Roman', monospace;
+    font-size: 20px;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgba(128, 128, 128, 0.664)
+}
+
+.category-wrapper, .sub-category-wrapper, #book-desc-mainbox {
+    background-color: white;
+    margin: 4vh 3vw;
+}
+
+.category-wrapper > a, .sub-category-wrapper > a {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.category, .sub-category {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.category img, .sub-category img {
+    max-height: 65%;
+    max-width: 25%;
+}
+
+.category a, .sub-category a {
+    font-size: 12px;
+}
+
+.category h4, .sub-category h4 {
+    font-size: 16px;
+}
+
+
+
+
+.book-name-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#image-price-order-button {
+    display: grid;
+    width: 75%;
+    height: 50vh;
+    grid-template:
+        "img-main img-sub1 buy" 1fr
+        "img-main img-sub2 buy" 1fr
+        "img-main img-sub3 buy" 1fr;
+    grid-template-columns: 2fr 1fr 3fr;
+    align-items: center;
+    justify-items: center;
+}
+
+#image-price-order-button img {
+    object-fit: contain;
+    height: 100%;
+    overflow: hidden;
+}
+
+#image-price-order-button button {
+    background-color: rgba(255, 166, 0, 0.811);
+    width: 100%;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-family: Consolas, 'Times New Roman', monospace;
+    cursor: pointer;
+    text-align: center;
+}
+
+#image-price-order-button button:hover {
+    background-color: orange;
+}
+
+#breadcrumb {
+    font-size: 17px;
+    margin-left: 3vw;
+}
+
+#book-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 3vh;
+    margin-left: 3vw;
+}
+
+#book-desc {
+    font-size: 14px;
+    margin: 3vh 2vw;
+    text-align: justify;
+}
+
+#price {
+    font-size: 40px;
+    color: orange;
+}
+
+
+
+
+
+
+#contact-mainbox {
+    background-color: white;
+    margin: 4vh 3vw;
+}
+
+#form-wrapper {
+    margin: 6vh 10vw;
+}
+
+
+
+
+
+
+@media screen and (max-width: 960px) {
+    header nav, footer nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1vw;
+    }
+
+    #image-price-order-button img {
+        object-fit: contain;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #image-price-order-button {
+        width: 100%;
+        height: 75vh;
+        grid-template:
+            "img-main img-main img-main" 2fr
+            "img-sub1 img-sub2 img-sub3" 0.5fr
+            "buy buy buy" 0.25fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    input#name, input#email, input#phone {
+        display: block;
+    }
+}
