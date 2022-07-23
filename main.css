@@ -20,7 +20,7 @@ header, footer {
 }
 
 main > p, #contact-heading {
-    font-family: "Super Mario 256", 'Times New Roman', monospace;
+    font-family: "Super Mario 256", Consolas, 'Times New Roman', monospace;
     font-size: 40px;
     background-color: white;
     text-align: center;
